@@ -1,0 +1,98 @@
+.wrapper {
+  margin-top: 40px;
+  min-height: 200px;
+}
+.root {
+  max-width: 1070px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 8px;
+  background-color: #171717;
+  margin: 0 20px 20px 0;
+}
+.image:hover .delete-circle {
+  display: block;
+  cursor: pointer;
+}
+.delete-circle {
+  position: absolute;
+  cursor: pointer;
+  display: none;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px; 
+  background-color: white;
+}
+.cross {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 25px;
+  height: 25px;
+}
+.cross:before, .cross:after {
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  content: ' ';
+  height: 18px;
+  width: 2px;
+  background-color: #333;
+}
+.cross:before {
+  transform: rotate(45deg);
+}
+.cross:after {
+  transform: rotate(-45deg);
+}
+.image img {
+  display: block;
+  border: 1px solid white;
+  max-width: 300px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 15px 0;
+}
+.head {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #F59635;
+}
+.checksum {
+  width: 120px;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .image {
+    margin-right: 0;
+  }
+  .image img {
+    max-width: 240px;
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alex",
+      "email": "alex",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "Maks",
+      "email": "maks@gmail.com",
+      "password": "12003abc"
+    },
+    {
+      "id": 3,
+      "name": "Rembo",
+      "email": "rembo@gmail.com",
+      "password": "9293"
+    },
+    {
+      "id": 4,
+      "name": "Nick",
+      "email": "nick@gmail.com",
+      "password": "135466"
+    },
+    {
+      "id": 5,
+      "name": "George",
+      "email": "george@gmail.com",
+      "password": "asdjs"
+    },
+    {
+      "id": 6,
+      "name": "Simon",
+      "email": "simon@gmail.com",
+      "password": "olaola"
+    },
+    {
+      "id": 7,
+      "name": "Hasan",
+      "email": "hasan@gmail.com",
+      "password": "test123"
+    },
+    {
+      "id": 8,
+      "name": "Richard",
+      "email": "richard@gmail.com",
+      "password": "rich94"
+    },
+    {
+      "id": 9,
+      "name": "Jessica",
+      "email": "jessica@gmail.com",
+      "password": "jessica93"
+    },
+    {
+      "id": 10,
+      "name": "Olga",
+      "email": "olga@gmail.com",
+      "password": "olga78"
+    }
+  ]
+}

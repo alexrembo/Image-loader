@@ -1,4 +1,5 @@
 import * as types from 'constants/actionTypes'
+import { REHYDRATE } from 'redux-persist/constants'
 import R from 'ramda'
 
 const initialState = { 
@@ -9,6 +10,15 @@ const initialState = {
 export default function images(state = initialState, action = {}) {
   const { type } = action
   switch (type) {
+    case REHYDRATE: {
+      if(!action.payload.images.imagesList) {
+        return state 
+      } else {
+        return { 
+          imagesList: action.payload.images.imagesList
+        }
+      }
+    } 
     case types.SAVE_IMAGES_TO_STORE: {
       return {
         imagesList: state.imagesList.concat(state.imagesPreviewList)

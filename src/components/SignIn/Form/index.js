@@ -68,7 +68,7 @@ class Form extends Component {
                 </div> 
                 <button 
                   className='btn button-save'
-                  type='submit' 
+                  type='submit'
                 >
                   Submit
                 </button>

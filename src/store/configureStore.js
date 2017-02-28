@@ -1,4 +1,5 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
+import { persistStore, autoRehydrate } from 'redux-persist'
 import rootReducer from '../reducers'
 import createLogger from 'redux-logger'
 import thunk from 'redux-thunk'
@@ -8,7 +9,11 @@ export default function configureStore(initialState) {
   const store = createStore(
     rootReducer,
     initialState,
-    applyMiddleware(thunk, logger)) 
+    compose(
+      applyMiddleware(thunk, logger)), 
+      autoRehydrate()
+    )
+    persistStore(store)
 
   if (module.hot) {
     module.hot.accept('../reducers', () => {

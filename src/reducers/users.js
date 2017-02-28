@@ -1,4 +1,5 @@
 import * as types from 'constants/actionTypes'
+import { REHYDRATE } from 'redux-persist/constants'
 import R from 'ramda'
 
 const initialState = {
@@ -8,6 +9,9 @@ const initialState = {
 export default function users(state = initialState, action = {}) {
   const { type } = action
   switch (type) {
+    case REHYDRATE: {
+      return action.payload.users
+    }
     case types.GET_USERS_LIST:
       return {
         usersList: action.payload.users
